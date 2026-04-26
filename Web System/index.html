@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job App - Login & Register</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body {
+            background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2070') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .glass-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        h2 { color: white; margin-bottom: 30px; font-size: 2rem; }
+        .input-group { position: relative; margin-bottom: 20px; text-align: left; }
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            color: white;
+            outline: none;
+            font-size: 1rem;
+        }
+        .input-group input::placeholder { color: rgba(255, 255, 255, 0.7); }
+        button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 25px;
+            border: none;
+            background: white;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        button:hover { background: rgba(255, 255, 255, 0.8); }
+        .switch-form { margin-top: 20px; color: white; font-size: 0.9rem; }
+        .switch-form a { color: white; font-weight: bold; text-decoration: none; cursor: pointer; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="glass-container">
+        <div id="loginForm">
+            <h2>Login</h2>
+            <div class="input-group"><input type="text" id="loginUser" placeholder="Username" required></div>
+            <div class="input-group"><input type="password" id="loginPass" placeholder="Password" required></div>
+            <button onclick="handleLogin()">Log in</button>
+            <p class="switch-form">Don't have an account? <a onclick="toggleForm()">Register</a></p>
+        </div>
+
+        <div id="signupForm" class="hidden">
+            <h2>Sign Up</h2>
+            <div class="input-group"><input type="text" id="regUser" placeholder="Choose Username" required></div>
+            <div class="input-group"><input type="email" id="regEmail" placeholder="Email Address" required></div>
+            <div class="input-group"><input type="password" id="regPass" placeholder="Password" required></div>
+            <button onclick="handleRegister()">Register Now</button>
+            <p class="switch-form">Already have an account? <a onclick="toggleForm()">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm() {
+            document.getElementById('loginForm').classList.toggle('hidden');
+            document.getElementById('signupForm').classList.toggle('hidden');
+        }
+
+        async function handleLogin() {
+            const username = document.getElementById('loginUser').value;
+            const password = document.getElementById('loginPass').value;
+
+            try {
+                const res = await fetch('http://localhost:3000/api/login', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ username, password })
+                });
+                const result = await res.json();
+                if(result.success) {
+                    alert("Login Successful! Welcome " + result.user.username);
+                } else {
+                    alert("Login Failed: " + result.message);
+                }
+            } catch (err) {
+                alert("Cannot connect to Server. Make sure node server.js is running.");
+            }
+        }
+
+        async function handleRegister() {
+            const username = document.getElementById('regUser').value;
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPass').value;
+
+            if (!username || !email || !password) {
+                alert("Please fill up all fields!");
+                return;
+            }
+
+            try {
+                const res = await fetch('http://localhost:3000/api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, email, password })
+                });
+
+                const result = await res.json();
+                if (result.success) {
+                    alert("Registration Successful! You can now login.");
+                    toggleForm(); // Mobalik sa login view
+                } else {
+                    alert("Error: " + result.message);
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Cannot connect to server. Check if terminal shows 'Connected to MySQL'.");
+            }
+        }
+    </script>
+</body>
+</html>

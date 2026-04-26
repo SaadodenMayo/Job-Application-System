@@ -1,0 +1,130 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Job Application System API",
+    "version": "1.0.0",
+    "description": "Organized API for Login, Jobs, and Applicants"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "tags": [
+    { "name": "Authentication", "description": "Login endpoints" },
+    { "name": "Jobs", "description": "Job management endpoints" },
+    { "name": "Applicants", "description": "Applicant management endpoints" }
+  ],
+  "paths": {
+    "/api/login": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "User authentication",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Success" } }
+      }
+    },
+    "/api/jobs": {
+      "get": {
+        "tags": ["Jobs"],
+        "summary": "List all jobs",
+        "responses": { "200": { "description": "Success" } }
+      },
+      "post": {
+        "tags": ["Jobs"],
+        "summary": "Add new job",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "job_title": { "type": "string" },
+                  "job_description": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Success" } }
+      }
+    },
+    "/api/applicants": {
+      "get": {
+        "tags": ["Applicants"],
+        "summary": "Get all applicants",
+        "responses": { "200": { "description": "Success" } }
+      },
+      "post": {
+        "tags": ["Applicants"],
+        "summary": "Submit application",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "job_id": { "type": "integer" },
+                  "full_name": { "type": "string" },
+                  "email": { "type": "string" },
+                  "contact_no": { "type": "string" },
+                  "school_institution": { "type": "string" },
+                  "degree": { "type": "string" },
+                  "year_completed": { "type": "string" },
+                  "skills_qualification": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Success" } }
+      }
+    },
+    "/api/applicants/{id}": {
+      "put": {
+        "tags": ["Applicants"],
+        "summary": "Update status",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "application_status": { "type": "string", "enum": ["Pending", "Hired", "Rejected"] }
+                }
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Updated" } }
+      },
+      "delete": {
+        "tags": ["Applicants"],
+        "summary": "Remove applicant",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "responses": { "200": { "description": "Deleted" } }
+      }
+    }
+  }
+}
