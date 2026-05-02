@@ -134,7 +134,7 @@ app.delete('/api/jobs/:id', (req, res) => {
             // Dili nato i-delete kon naay applicants aron dili mag-error ang database
             return res.status(400).json({ 
                 success: false, 
-                message: `Dili mapapas: Naay ${applicantCount} applicants nga naka-link niining Job ID. I-delete una ang mga applicants.` 
+                message: "Cant Delete this Job Because there are ${applicantCount} applicants link to this Job."
             });
         }
 
