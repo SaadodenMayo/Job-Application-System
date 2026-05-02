@@ -117,6 +117,51 @@ app.delete('/api/applicants/:id', (req, res) => {
     });
 });
 
+// 9. DELETE JOB (Kini ang bag-o!)
+app.delete('/api/jobs/:id', (req, res) => {
+    const { id } = req.params;
+
+    // STEP 1: I-check una kon naay applicants nga naka-link niini nga Job
+    // Importante kini tungod sa Foreign Key constraints sa database
+    const checkSql = "SELECT COUNT(*) AS total FROM applicants WHERE job_id = ?";
+    
+    db.query(checkSql, [id], (err, results) => {
+        if (err) return res.status(500).json({ success: false, error: err.message });
+
+        const applicantCount = results[0].total;
+
+        if (applicantCount > 0) {
+            // Dili nato i-delete kon naay applicants aron dili mag-error ang database
+            return res.status(400).json({ 
+                success: false, 
+                message: `Dili mapapas: Naay ${applicantCount} applicants nga naka-link niining Job ID. I-delete una ang mga applicants.` 
+            });
+        }
+
+        // STEP 2: Kon zero na ang applicants, i-delete na ang Job
+        const deleteSql = "DELETE FROM jobs WHERE job_id = ?";
+        db.query(deleteSql, [id], (err, result) => {
+            if (err) return res.status(500).json({ success: false, error: err.message });
+            
+            res.json({ success: true, message: 'Job successfully deleted!' });
+        });
+    });
+});
+
+// 10. UPDATE APPLICANT STATUS (Gi-fix aron mo-support sa /status nga path)
+app.put('/api/applicants/:id/status', (req, res) => {
+    const { id } = req.params;
+    const { status } = req.body;
+    
+    // Gi-match nako ang column name (application_status) sa imong database
+    const sql = "UPDATE applicants SET application_status = ? WHERE applicant_id = ?";
+    
+    db.query(sql, [status, id], (err, result) => {
+        if (err) return res.status(500).json({ error: err.message });
+        res.json({ success: true, message: 'Status updated!' });
+    });
+});
+
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`\n🚀 API Server running on http://localhost:${PORT}`);

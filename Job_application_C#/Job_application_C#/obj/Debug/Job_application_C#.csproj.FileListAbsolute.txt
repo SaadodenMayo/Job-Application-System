@@ -1,0 +1,13 @@
+C:\Job Application System\Job_application_C#\Job_application_C#\bin\Debug\Job_application_C#.exe.config
+C:\Job Application System\Job_application_C#\Job_application_C#\bin\Debug\Job_application_C#.exe
+C:\Job Application System\Job_application_C#\Job_application_C#\bin\Debug\Job_application_C#.pdb
+C:\Job Application System\Job_application_C#\Job_application_C#\bin\Debug\Guna.UI2.dll
+C:\Job Application System\Job_application_C#\Job_application_C#\bin\Debug\Newtonsoft.Json.dll
+C:\Job Application System\Job_application_C#\Job_application_C#\bin\Debug\Newtonsoft.Json.xml
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C#.csproj.AssemblyReference.cache
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C_.Properties.Resources.resources
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C#.csproj.GenerateResource.cache
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C#.csproj.CoreCompileInputs.cache
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_appl.1234ADA0.Up2Date
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C#.exe
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C#.pdb

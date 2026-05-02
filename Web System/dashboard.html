@@ -57,147 +57,211 @@
 </head>
 <body>
 
-    <nav class="sidebar" id="sidebar">
-        <div class="logo-section">
-            <i class="fas fa-briefcase" style="margin-right: 15px; color: #5e35b1;"></i>
-            <span class="logo-text">JobPortal Admin</span>
-        </div>
-        <ul class="nav-links">
-            <li onclick="showSection('home')"><i class="fas fa-home"></i><span class="link-text">Home</span></li>
-            <li onclick="showSection('post-job')"><i class="fas fa-plus-circle"></i><span class="link-text">Post a Job</span></li>
-            <li onclick="showSection('app-form')"><i class="fas fa-file-invoice"></i><span class="link-text">Application Form</span></li>
-            <li onclick="confirmLogout()" style="margin-top: auto; color: #fa5252;"><i class="fas fa-sign-out-alt"></i><span class="link-text">Log out</span></li>
-        </ul>
-    </nav>
-
-    <div class="main-content">
-        <div class="top-bar">
-            <i class="fas fa-bars toggle-btn" onclick="toggleSidebar()"></i>
-            <h2>Welcome, Admin 👋</h2>
-        </div>
-
-        <div id="home-section">
-            <div class="stats-grid">
-                <div class="stat-card"><i class="fas fa-users"></i><div><p>Total Applicants</p><h3 id="count-total">0</h3></div></div>
-                <div class="stat-card"><i class="fas fa-check-circle"></i><div><p>Hired</p><h3 id="count-hired">0</h3></div></div>
-                <div class="stat-card"><i class="fas fa-clock"></i><div><p>Pending</p><h3 id="count-pending">0</h3></div></div>
-            </div>
-
-            <div class="table-container">
-                <h3>Recent Applicants</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Applicant Name</th>
-                            <th>Job Applied</th>
-                            <th>Email</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="recentTableBody">
-                        </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div id="post-job-section" style="display:none;">
-    <div class="table-container" style="max-width: 500px; margin: 20px auto; background: white; padding: 30px; border-radius: 15px;">
-        <h2 style="margin-bottom: 20px; color: #5e35b1;"><i class="fas fa-plus-circle"></i> Post New Job</h2>
-        
-        <div style="margin-bottom: 15px; text-align: left;">
-            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Job Title</label>
-            <input type="text" id="job_title" placeholder="e.g. Office Staff" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-        </div>
-
-        <div style="margin-bottom: 20px; text-align: left;">
-            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Job Description</label>
-            <textarea id="job_description" placeholder="Unsay buhaton ani nga trabaho?" rows="4" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;"></textarea>
-        </div>
-
-        <button onclick="submitJob()" style="width: 100%; padding: 15px; background: #5e35b1; color: white; border: none; border-radius: 10px; font-size: 1rem; cursor: pointer; font-weight: bold;">
-            <i class="fas fa-paper-plane"></i> Post Job Now
-        </button>
+    <!-- Sidebar Section -->
+<nav class="sidebar" id="sidebar">
+    <div class="logo-section">
+        <i class="fas fa-briefcase" style="margin-right: 15px; color: #5e35b1;"></i>
+        <span class="logo-text">JobPortal Admin</span>
     </div>
-</div>
-        <div id="application-form-section" style="display:none;">
-    <div class="table-container" style="max-width: 700px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <h2 style="margin-bottom: 20px; color: #5e35b1;"><i class="fas fa-file-signature"></i> Walk-in Applicant Entry</h2>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;">
-            <div>
-                <label style="font-weight: bold;">Job ID (Refer to Jobs Table)</label>
-                <input type="number" id="app_job_id" placeholder="e.g. 1" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
-            </div>
-            <div>
-                <label style="font-weight: bold;">Full Name</label>
-                <input type="text" id="app_name" placeholder="John Doe" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
-            </div>
-            <div>
-                <label style="font-weight: bold;">Email Address</label>
-                <input type="email" id="app_email" placeholder="john@example.com" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
-            </div>
-            <div>
-                <label style="font-weight: bold;">Contact Number</label>
-                <input type="text" id="app_contact" placeholder="09123456789" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
-            </div>
-            <div>
-                <label style="font-weight: bold;">School/Institution</label>
-                <input type="text" id="app_school" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
-            </div>
-            <div>
-                <label style="font-weight: bold;">Degree</label>
-                <input type="text" id="app_degree" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
-            </div>
-            <div>
-                <label style="font-weight: bold;">Year Completed</label>
-                <input type="number" id="app_year" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
-            </div>
-            <div>
-                <label style="font-weight: bold;">Skills/Qualification</label>
-                <input type="text" id="app_skills" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
-            </div>
+    <ul class="nav-links">
+        <li onclick="showSection('home')"><i class="fas fa-home"></i><span class="link-text">Home</span></li>
+        <li onclick="showSection('post-job')"><i class="fas fa-plus-circle"></i><span class="link-text">Post a Job</span></li>
+        <li onclick="showSection('job-list')"><i class="fas fa-list"></i><span class="link-text">Job List</span></li>
+        <li onclick="showSection('app-form')"><i class="fas fa-file-invoice"></i><span class="link-text">Application Form</span></li>
+        <li onclick="showSection('employees')"><i class="fas fa-user-tie"></i><span class="link-text">My Employees</span></li>
+        <li onclick="confirmLogout()" style="margin-top: auto; color: #fa5252;"><i class="fas fa-sign-out-alt"></i><span class="link-text">Log out</span></li>
+    </ul>
+</nav>
+
+<!-- Main Content Area -->
+<div class="main-content">
+    <div class="top-bar">
+        <i class="fas fa-bars toggle-btn" onclick="toggleSidebar()"></i>
+        <h2>Welcome, Admin 👋</h2>
+    </div>
+
+    <!-- 1. HOME SECTION -->
+    <div id="home-section">
+        <div class="stats-grid">
+            <div class="stat-card"><i class="fas fa-users"></i><div><p>Total Applicants</p><h3 id="count-total">0</h3></div></div>
+            <div class="stat-card"><i class="fas fa-check-circle"></i><div><p>Hired</p><h3 id="count-hired">0</h3></div></div>
+            <div class="stat-card"><i class="fas fa-clock"></i><div><p>Pending</p><h3 id="count-pending">0</h3></div></div>
         </div>
 
-        <div style="margin-top: 25px; display: flex; gap: 10px;">
-            <button onclick="submitWalkIn('Hired')" style="flex: 1; background: #28a745; color: white; border: none; padding: 15px; border-radius: 10px; cursor: pointer; font-weight: bold;">
-                <i class="fas fa-check-circle"></i> Mark as Hired
-            </button>
-            <button onclick="submitWalkIn('Cancelled')" style="flex: 1; background: #dc3545; color: white; border: none; padding: 15px; border-radius: 10px; cursor: pointer; font-weight: bold;">
-                <i class="fas fa-times-circle"></i> Cancel Application
+        <div class="table-container">
+            <h3>Recent Applicants</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Applicant Name</th>
+                        <th>Job Applied</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="recentTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 2. POST JOB SECTION -->
+    <div id="post-job-section" style="display:none;">
+        <div class="table-container" style="max-width: 500px; margin: 20px auto; background: white; padding: 30px; border-radius: 15px;">
+            <h2 style="margin-bottom: 20px; color: #5e35b1;"><i class="fas fa-plus-circle"></i> Post New Job</h2>
+            <div style="margin-bottom: 15px; text-align: left;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Job Title</label>
+                <input type="text" id="job_title" placeholder="e.g. Office Staff" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+            <div style="margin-bottom: 20px; text-align: left;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Job Description</label>
+                <textarea id="job_description" placeholder="Unsay buhaton ani nga trabaho?" rows="4" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;"></textarea>
+            </div>
+            <button onclick="submitJob()" style="width: 100%; padding: 15px; background: #5e35b1; color: white; border: none; border-radius: 10px; font-size: 1rem; cursor: pointer; font-weight: bold;">
+                <i class="fas fa-paper-plane"></i> Post Job Now
             </button>
         </div>
     </div>
-</div>
-</div>
+
+    <!--- JOB LIST -->
+    <div id="job-list-section" style="display:none;">
+        <div class="table-container">
+            <h2 style="color: #5e35b1; margin-bottom: 20px;"><i class="fas fa-briefcase"></i> Posted Jobs List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Job ID</th>
+                        <th>Job Title</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="jobTableBody">
+                <!-- Diri mosulod ang listahan sa mga trabaho -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 3. APPLICATION FORM SECTION -->
+    <div id="application-form-section" style="display:none;">
+        <div class="table-container" style="max-width: 700px; margin: 0 auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <h2 style="margin-bottom: 20px; color: #5e35b1;"><i class="fas fa-file-signature"></i> Walk-in Applicant Entry</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;">
+                <div>
+                    <label style="font-weight: bold;">Job ID</label>
+                    <input type="number" id="app_job_id" placeholder="ex. 1" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <div>
+                    <label style="font-weight: bold;">Full Name</label>
+                    <input type="text" id="app_name" placeholder="Enter Fullname" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <div>
+                    <label style="font-weight: bold;">Email Address</label>
+                    <input type="email" id="app_email" placeholder="example@gmail.com" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <div>
+                    <label style="font-weight: bold;">Contact Number</label>
+                    <input type="text" id="app_contact" placeholder="Enter Contact Number" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <div>
+                    <label style="font-weight: bold;">School</label>
+                    <input type="text" id="app_school" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <div>
+                    <label style="font-weight: bold;">Degree</label>
+                    <input type="text" id="app_degree" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <div>
+                    <label style="font-weight: bold;">Year Completed</label>
+                    <input type="number" id="app_year" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <div>
+                    <label style="font-weight: bold;">Skills</label>
+                    <input type="text" id="app_skills" style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+            </div>
+            <div style="margin-top: 25px; display: flex; gap: 10px;">
+                <button onclick="submitWalkIn('Hired')" style="flex: 1; background: #28a745; color: white; border: none; padding: 15px; border-radius: 10px; cursor: pointer; font-weight: bold;">
+                    <i class="fas fa-check-circle"></i> Mark as Hired
+                </button>
+                <button onclick="submitWalkIn('Cancelled')" style="flex: 1; background: #dc3545; color: white; border: none; padding: 15px; border-radius: 10px; cursor: pointer; font-weight: bold;">
+                    <i class="fas fa-times-circle"></i> Cancel Application
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. MY EMPLOYEES SECTION -->
+    <div id="employees-section" style="display:none;">
+        <div class="table-container">
+            <h2 style="color: #28a745; margin-bottom: 20px;"><i class="fas fa-users"></i> Official Employees List</h2>
+            <p style="color: #666; margin-bottom: 15px;">LIST OF ALL HIRED APPLICANT</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Job Position (ID)</th>
+                        <th>Email</th>
+                        <th>Contact No.</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody">
+                    <!-- Data will be inserted here by JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div> <!-- Closing Main Content -->
 
     <script>
         function toggleSidebar() {
             document.getElementById('sidebar').classList.toggle('collapsed');
         }
 
+        
         function showSection(name) {
-    // I-match nato ang IDs sa imong tinuod nga HTML tags
-    const sections = ['home-section', 'post-job-section', 'application-form-section'];
+    // 1. I-apil ang 'job-list-section' sa listahan sa mga i-hide
+    const sections = [
+        'home-section', 
+        'post-job-section', 
+        'application-form-section', 
+        'employees-section', 
+        'job-list-section'
+    ];
     
     sections.forEach(s => {
         const el = document.getElementById(s);
         if (el) el.style.display = 'none';
     });
 
-    // Karon i-show nato ang saktong section
+    // 2. I-set ang saktong target ID base sa ngalan sa button
     let targetId = name + '-section';
     
-    // Special case para sa imong Application Form button nga 'app-form' ang tawag
     if (name === 'app-form') {
         targetId = 'application-form-section';
+    } else if (name === 'employees') {
+        targetId = 'employees-section';
+    } else if (name === 'job-list') {
+        targetId = 'job-list-section';
     }
 
+    // 3. I-display ang target section
     const target = document.getElementById(targetId);
     if (target) {
         target.style.display = 'block';
+        
+        // 4. AUTO-REFRESH: Tawgon ang mga fetch functions base sa gi-ablihan nga section
+        if (name === 'home' || name === 'employees') {
+            fetchRecent(); // Gi-update ang counters ug tables sa home/employees
+        } else if (name === 'job-list') {
+            fetchJobs(); // Kuhaon ang listahan sa jobs gikan sa database
+        }
     } else {
-        console.error("Missing section ID: " + targetId);
+        console.error("Section not found: " + targetId);
     }
 }
 
@@ -207,40 +271,72 @@
             }
         }
 
-        async function fetchRecent() {
-            const res = await fetch('http://localhost:3000/api/applicants');
-            const data = await res.json();
-            const table = document.getElementById('recentTableBody');
-            table.innerHTML = '';
-            
-            // Updates counts
-            // Updates counts - Mas sigurado ni nga logic
-document.getElementById('count-total').innerText = data.length;
+        
+async function fetchRecent() {
+    try {
+        const res = await fetch('http://localhost:3000/api/applicants');
+        const data = await res.json();
+        
+        // 1. UPDATE RECENT TABLE (HOME) - Makit-an tanan
+        const recentTable = document.getElementById('recentTableBody');
+        if (recentTable) {
+            recentTable.innerHTML = '';
+            // I-reverse para ang pinakabag-o maoy naa sa taas
+            data.slice().reverse().slice(0, 10).forEach(app => {
+                let statusColor = '#666'; 
+                if (app.application_status === 'Hired') statusColor = '#28a745';
+                if (app.application_status === 'Rejected' || app.application_status === 'Fired') statusColor = '#dc3545';
 
-// Gigamitan nato og .toLowerCase() para bisan "hired" o "Hired" ang naa sa DB, ma-ihap gihapon
-document.getElementById('count-pending').innerText = data.filter(a => 
-    a.application_status && a.application_status.toLowerCase() === 'pending'
-).length;
-
-document.getElementById('count-hired').innerText = data.filter(a => 
-    a.application_status && a.application_status.toLowerCase() === 'hired'
-).length;
-
-            data.slice(-5).forEach(app => { // Show last 5
-                table.innerHTML += `
+                recentTable.innerHTML += `
                     <tr>
                         <td>${app.full_name}</td>
                         <td>Job ID: ${app.job_id}</td>
                         <td>${app.email}</td>
-                        <td><b>${app.application_status}</b></td>
+                        <td><b style="color: ${statusColor}">${app.application_status}</b></td>
                         <td>
                             <button class="btn-hire" onclick="updateStatus(${app.applicant_id}, 'Hired')">Hire</button>
                             <button class="btn-reject" onclick="updateStatus(${app.applicant_id}, 'Rejected')">Reject</button>
                         </td>
-                    </tr>
-                `;
+                    </tr>`;
             });
         }
+
+        // 2. UPDATE EMPLOYEES TABLE - 'Hired' ra gyud ang makita diri
+        const employeeTable = document.getElementById('employeeTableBody');
+        if (employeeTable) {
+            employeeTable.innerHTML = '';
+            const hiredOnly = data.filter(a => a.application_status === 'Hired');
+            
+            hiredOnly.forEach(emp => {
+                employeeTable.innerHTML += `
+                    <tr>
+                        <td>${emp.full_name}</td>
+                        <td>Position ID: ${emp.job_id}</td>
+                        <td>${emp.email}</td>
+                        <td>${emp.contact_no || 'N/A'}</td>
+                        <td><span style="background: #e6fcf5; color: #0ca678; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Active</span></td>
+                        <td>
+                            <button onclick="updateStatus(${emp.applicant_id}, 'Fired')" 
+                                    style="background: #ffc9c9; color: #fa5252; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                                <i class="fas fa-user-slash"></i> Fire
+                            </button>
+                        </td>
+                    </tr>`;
+            });
+        }
+
+        // 3. UPDATE STATS COUNTERS
+        const totalHired = data.filter(a => a.application_status && a.application_status.toLowerCase() === 'hired').length;
+        const totalPending = data.filter(a => a.application_status && a.application_status.toLowerCase() === 'pending').length;
+
+        if(document.getElementById('count-total')) document.getElementById('count-total').innerText = data.length;
+        if(document.getElementById('count-hired')) document.getElementById('count-hired').innerText = totalHired;
+        if(document.getElementById('count-pending')) document.getElementById('count-pending').innerText = totalPending;
+
+    } catch (err) {
+        console.error("Error fetching applicants:", err);
+    }
+}
 
         async function updateStatus(id, status) {
             await fetch(`http://localhost:3000/api/applicants/${id}`, {
@@ -321,6 +417,51 @@ async function submitWalkIn(status) {
         }
     } catch (error) {
         alert("Server Error. Siguraduha nga nag-run ang server.js");
+    }
+}
+
+async function fetchJobs() {
+    try {
+        const res = await fetch('http://localhost:3000/api/jobs');
+        const jobs = await res.json();
+        
+        const jobTable = document.getElementById('jobTableBody');
+        if (jobTable) {
+            jobTable.innerHTML = '';
+            jobs.forEach(job => {
+                jobTable.innerHTML += `
+                    <tr>
+                        <td>${job.job_id}</td>
+                        <td><b>${job.job_title}</b></td>
+                        <td>${job.job_description}</td>
+                        <td>
+                            <button onclick="deleteJob(${job.job_id})" 
+                                    style="background: #ffc9c9; color: #fa5252; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                                <i class="fas fa-trash"></i> Delete
+                            </button>
+                        </td>
+                    </tr>`;
+            });
+        }
+    } catch (err) {
+        console.error("Error fetching jobs:", err);
+    }
+}
+
+// 5. FUNCTION PARA SA PAG-DELETE OG JOB
+async function deleteJob(id) {
+    if (!confirm("Sigurado ka? Kung i-delete nimo ni, mawala pud ang record sa mga applicants ani nga Job ID.")) return;
+
+    try {
+        const res = await fetch(`http://localhost:3000/api/jobs/${id}`, { method: 'DELETE' });
+        if (res.ok) {
+            alert("Job deleted successfully!");
+            fetchJobs(); // Refresh the job list table
+        } else {
+            alert("Error deleting job. Basin naay applicants nga naka-link ani.");
+        }
+    } catch (err) {
+        console.error("Delete error:", err);
     }
 }
     </script>
