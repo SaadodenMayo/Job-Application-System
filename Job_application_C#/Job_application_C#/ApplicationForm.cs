@@ -37,11 +37,6 @@ namespace Job_application_C_
             }
         }
 
-        private void UC_Apply_Load(object sender, EventArgs e)
-        {
-            LoadJobsToCombo();
-        }
-
         private async void btnSubmitApplication_Click(object sender, EventArgs e)
         {
             int selectedJobId = (int)cmbJobTitle.SelectedValue;
@@ -95,6 +90,11 @@ namespace Job_application_C_
         private void btnCancelSubmittion_Click(object sender, EventArgs e)
         {
             ClearForm();
+        }
+
+        private void ApplicationForm_Load(object sender, EventArgs e)
+        {
+            LoadJobsToCombo();
         }
     }
 }

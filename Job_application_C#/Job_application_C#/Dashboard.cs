@@ -44,5 +44,36 @@ namespace Job_application_C_
             ApplicationForm uc = new ApplicationForm();
             addUserControl(uc);
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?",
+                                        "Confirm Logout",
+                                        MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                
+                UserSession.UserId = 0;
+                UserSession.Username = "";
+
+                Form1 login = new Form1();
+                login.Show();
+
+               
+                this.Close();
+            }
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            btnHome.PerformClick();
+
+            Home uc = new Home();
+            addUserControl(uc);
+
+            btnHome.Checked = true;
+        }
     }
 }

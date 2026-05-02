@@ -404,6 +404,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ApplicationForm";
             this.Size = new System.Drawing.Size(626, 491);
+            this.Load += new System.EventHandler(this.ApplicationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -21,7 +21,8 @@ namespace Job_application_C_
             InitializeComponent();
         }
 
-        private void UC_Home_Load(object sender, EventArgs e)
+
+        private void Home_Load(object sender, EventArgs e)
         {
             // Kuhaon ang ngalan gikan sa UserSession class nga atong gihimo
             string username = UserSession.Username;
@@ -36,9 +37,9 @@ namespace Job_application_C_
 
             lblWelcome.Text = $"{greeting}, {username}!";
 
-            lblInstructions.Text = "Welcome aboard!Ready for your next career move ?" + 
-                                   "Check out our latest job listings and keep an eye" + 
-                                   "on your applications.Just click 'Available Jobs' to begin.";
+            lblInstructions.Text = "Welcome aboard! Ready for your next career move?" + Environment.NewLine + Environment.NewLine +
+                          "Check out our latest job listings and track your applications easily." + Environment.NewLine +
+                          "Just click 'Available Jobs' to begin your journey.";
         }
     }
 }

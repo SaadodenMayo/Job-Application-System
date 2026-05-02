@@ -35,20 +35,22 @@
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Location = new System.Drawing.Point(63, 152);
+            this.lblWelcome.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(52, 85);
             this.lblWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(0, 16);
+            this.lblWelcome.Size = new System.Drawing.Size(0, 27);
             this.lblWelcome.TabIndex = 0;
             // 
             // lblInstructions
             // 
             this.lblInstructions.AutoSize = true;
-            this.lblInstructions.Location = new System.Drawing.Point(63, 181);
+            this.lblInstructions.Location = new System.Drawing.Point(54, 130);
             this.lblInstructions.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInstructions.Name = "lblInstructions";
             this.lblInstructions.Size = new System.Drawing.Size(0, 16);
             this.lblInstructions.TabIndex = 1;
+            this.lblInstructions.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Home
             // 
@@ -60,9 +62,10 @@
             this.Controls.Add(this.lblInstructions);
             this.Controls.Add(this.lblWelcome);
             this.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Home";
             this.Size = new System.Drawing.Size(626, 491);
+            this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

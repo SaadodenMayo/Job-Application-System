@@ -11,3 +11,10 @@ C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_ap
 C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_appl.1234ADA0.Up2Date
 C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C#.exe
 C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C#.pdb
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C#.exe.config
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C_.ApplicationForm.resources
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C_.AvailableJob.resources
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C_.Dashboard.resources
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C_.Form1.resources
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C_.Home.resources
+C:\Job Application System\Job_application_C#\Job_application_C#\obj\Debug\Job_application_C_.Signup.resources
