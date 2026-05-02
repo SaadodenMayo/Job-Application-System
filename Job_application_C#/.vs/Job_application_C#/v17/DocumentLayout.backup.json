@@ -3,27 +3,55 @@
   "WorkspaceRootPath": "C:\\Job Application System\\Job_application_C#\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|c:\\job application system\\job_application_c#\\job_application_c#\\applicationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\applicationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|c:\\job application system\\job_application_c#\\job_application_c#\\applicationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\applicationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|c:\\job application system\\job_application_c#\\job_application_c#\\availablejob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\availablejob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|c:\\job application system\\job_application_c#\\job_application_c#\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|C:\\Job Application System\\Job_application_C#\\job_application_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|C:\\Job Application System\\Job_application_C#\\job_application_c#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|C:\\Job Application System\\Job_application_C#\\job_application_c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|c:\\job application system\\job_application_c#\\job_application_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|c:\\job application system\\job_application_c#\\job_application_c#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|c:\\job application system\\job_application_c#\\job_application_c#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|c:\\job application system\\job_application_c#\\job_application_c#\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|c:\\job application system\\job_application_c#\\job_application_c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|c:\\job application system\\job_application_c#\\job_application_c#\\availablejob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\availablejob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|C:\\Job Application System\\Job_application_C#\\job_application_c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|c:\\job application system\\job_application_c#\\job_application_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|c:\\job application system\\job_application_c#\\job_application_c#\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|C:\\Job Application System\\Job_application_C#\\job_application_c#\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B8FB24C-EAFC-4B2B-B737-9CAE3651FBCF}|Job_application_C#\\Job_application_C#.csproj|solutionrelative:job_application_c#\\usersession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\Form1.cs",
               "RelativeDocumentMoniker": "Job_application_C#\\Form1.cs",
@@ -51,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Signup.cs [Design]",
               "DocumentMoniker": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\Signup.cs",
               "RelativeDocumentMoniker": "Job_application_C#\\Signup.cs",
@@ -77,7 +105,98 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\Home.cs",
+              "RelativeDocumentMoniker": "Job_application_C#\\Home.cs",
+              "ToolTip": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\Home.cs [Design]",
+              "RelativeToolTip": "Job_application_C#\\Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:46:37.435Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AvailableJob.cs [Design]",
+              "DocumentMoniker": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\AvailableJob.cs",
+              "RelativeDocumentMoniker": "Job_application_C#\\AvailableJob.cs",
+              "ToolTip": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\AvailableJob.cs [Design]",
+              "RelativeToolTip": "Job_application_C#\\AvailableJob.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:53:53.066Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationForm.cs [Design]",
+              "DocumentMoniker": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\ApplicationForm.cs",
+              "RelativeDocumentMoniker": "Job_application_C#\\ApplicationForm.cs",
+              "ToolTip": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\ApplicationForm.cs [Design]",
+              "RelativeToolTip": "Job_application_C#\\ApplicationForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:54:37.761Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ApplicationForm.cs",
+              "DocumentMoniker": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\ApplicationForm.cs",
+              "RelativeDocumentMoniker": "Job_application_C#\\ApplicationForm.cs",
+              "ToolTip": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\ApplicationForm.cs",
+              "RelativeToolTip": "Job_application_C#\\ApplicationForm.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAmwGAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T08:58:08.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AvailableJob.cs",
+              "DocumentMoniker": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\AvailableJob.cs",
+              "RelativeDocumentMoniker": "Job_application_C#\\AvailableJob.cs",
+              "ToolTip": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\AvailableJob.cs",
+              "RelativeToolTip": "Job_application_C#\\AvailableJob.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T08:19:19.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Home.cs",
+              "DocumentMoniker": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\Home.cs",
+              "RelativeDocumentMoniker": "Job_application_C#\\Home.cs",
+              "ToolTip": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\Home.cs",
+              "RelativeToolTip": "Job_application_C#\\Home.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T08:12:15.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Job_application_C#\\Dashboard.cs",
+              "ToolTip": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\Dashboard.cs",
+              "RelativeToolTip": "Job_application_C#\\Dashboard.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAUwBMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:49:20.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Signup.cs",
               "DocumentMoniker": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\Signup.cs",
               "RelativeDocumentMoniker": "Job_application_C#\\Signup.cs",
@@ -90,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\Form1.cs",
               "RelativeDocumentMoniker": "Job_application_C#\\Form1.cs",
@@ -103,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "UserSession.cs",
               "DocumentMoniker": "C:\\Job Application System\\Job_application_C#\\Job_application_C#\\UserSession.cs",
               "RelativeDocumentMoniker": "Job_application_C#\\UserSession.cs",
